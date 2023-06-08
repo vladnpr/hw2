@@ -1,23 +1,23 @@
 package main
 
 import (
-	"./animals"
-	"./cage"
-	"./zooKeeper"
+	zoo "github.com/vladnpr/zoo/animal"
+	cage "github.com/vladnpr/zoo/cage"
+	keeper "github.com/vladnpr/zoo/zooKeeper"
 )
 
 func main() {
-	rabbit := animals.NewRabbit("Boris", "2 kg", 2)
-	lizard := animals.NewLizard("Oleg", "300 g", 10)
-	chicken := animals.NewChicken("Carlos", "1.5 kg", 1)
-	keeper := zooKeeper.NewZooKeeper("Johny Cage")
+	rabbit := zoo.NewRabbit("Boris", "2 kg", 2)
+	lizard := zoo.NewLizard("Oleg", "300 g", 10)
+	chicken := zoo.NewChicken("Carlos", "1.5 kg", 1)
+	kpr := keeper.NewZooKeeper("Johny Cage")
 
 	cageR := cage.NewRabbitCage("Rabbit Cage")
-	keeper.CatchRabbit(&rabbit, &cageR)
+	kpr.CatchRabbit(&rabbit, &cageR)
 
 	cageL := cage.NewLizardCage("Lizard Cage")
-	keeper.CatchLizard(&lizard, &cageL)
+	kpr.CatchLizard(&lizard, &cageL)
 
 	cageC := cage.NewChickenCage("ChickenCage")
-	keeper.CatchChicken(&chicken, &cageC)
+	kpr.CatchChicken(&chicken, &cageC)
 }
