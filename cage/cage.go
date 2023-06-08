@@ -1,6 +1,6 @@
 package cage
 
-import "go_course/hw2/animals"
+import "../animals"
 
 type cage struct {
 	Name string

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"go_course/hw2/animals"
-	"go_course/hw2/cage"
-	"go_course/hw2/zooKeeper"
+	"./animals"
+	"./cage"
+	"./zooKeeper"
 )
 
 func main() {

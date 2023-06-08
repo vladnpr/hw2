@@ -1,9 +1,9 @@
 package zooKeeper
 
 import (
+	"../animals"
+	"../cage"
 	"fmt"
-	"go_course/hw2/animals"
-	"go_course/hw2/cage"
 )
 
 type ZooKeeper struct {
